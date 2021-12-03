@@ -17,6 +17,7 @@ namespace ImportDiagnoses
             {
                 var parts = line.Split(',');
 
+                // The first line is a header and does not contain a parseable code. For easy of use the check is made for all lines.
                 if (int.TryParse(parts[0], out int code))
                 { 
                     var diagnose = new Diagnose() { Code = code, Lichaamsdeel = parts[1], Omschrijving = parts[2] };

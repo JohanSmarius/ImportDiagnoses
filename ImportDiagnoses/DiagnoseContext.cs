@@ -19,7 +19,7 @@ namespace ImportDiagnoses
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // Only needed for console usage
+            // Only needed for console usage. In ASP.NET Core please use the DI-option.
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=Stamdata;Trusted_Connection=True;");
         }
     }

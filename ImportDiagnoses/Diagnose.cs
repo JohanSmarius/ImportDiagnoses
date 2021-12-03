@@ -9,6 +9,12 @@ namespace ImportDiagnoses
 {
     public class Diagnose
     {
+        /// <summary>
+        /// The normal Id is used as a primary key. Code can be used
+        /// for this as well, but that would require an explicit
+        /// call to the database to turn enable identity insert on before
+        /// SaveChanges and off after SaveChanges.
+        /// </summary>
         public int Id { get; set; }
 
         public int Code { get; set; }
